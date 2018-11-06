@@ -22,45 +22,31 @@ class ToastCreater {
             }
         }
 
-//        fun toastWithBackgroundColor(message: String, context: Context, isLong: Boolean, color: Int) {
-//            try {
-//                var toast: Toast
-//                if (isLong) {
-//
-//                    toast = Toast.makeText(context, message, Toast.LENGTH_LONG)
-//                }else{
-//                    toast = Toast.makeText(context, message, Toast.LENGTH_SHORT)
-//
-//                }
-//                val view = toast.getView()
-//                view.getBackground().setColorFilter(color, PorterDuff.Mode.SRC_IN)
-//                toast.show()
-//            }catch (exception: Exception){
-//                Log.e("Error Occured", "Invalid Color")
-//            }
-//
-//        }
-
-        fun createToastWithCustomLayout(context: Context,message: String,gravity: Int,
-                                        backgroundColor: String,imageBackgrount: Int,
-                                        layout: Int, idOfRootInLayout: Int, idOfTextView: Int){
+        fun createToastWithCustomLayout(context: Context, message: String, gravity: Int,
+                                        backgroundColor: String,
+                                        layout: Int, idOfRootInLayout: Int, idOfTextView: Int, isLong: Boolean) {
             var toast: Toast = Toast(context)
-            toast.createToast(context,message,gravity,
-                    backgroundColor, layout, idOfRootInLayout, idOfTextView)
+            toast.createToast(context, message, gravity,
+                    backgroundColor, layout, idOfRootInLayout, idOfTextView, isLong)
         }
-       private fun Toast.createToast(context: Context,message: String,gravity: Int,
-                              backgroundColor: String, layout: Int, idOfRootInLayout: Int, idOfTextView: Int){
+
+        private fun Toast.createToast(context: Context, message: String, gravity: Int,
+                                      backgroundColor: String, layout: Int,
+                                      idOfRootInLayout: Int, idOfTextView: Int, isLong: Boolean) {
             val infflater: LayoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
             val layout = infflater.inflate(layout, (context as Activity).findViewById(idOfRootInLayout))
             layout.findViewById<TextView>(idOfTextView).text = message
             layout.setBackgroundColor(Color.parseColor(backgroundColor))
-            setGravity(gravity,0,100)
-            duration = Toast.LENGTH_LONG
-            view = layout
+            setGravity(gravity, 0, 100)
+            if (isLong) {
+                duration = Toast.LENGTH_LONG
+            }else{
+                duration = Toast.LENGTH_SHORT
+            }
+                view = layout
             show()
 
         }
-
 
 
     }
