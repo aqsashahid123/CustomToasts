@@ -3,12 +3,8 @@ package com.example.customtoasts2
 import android.content.Context
 import android.widget.Toast
 import android.widget.TextView
-import android.graphics.PorterDuff
-import android.R.attr.duration
 import android.app.Activity
 import android.graphics.Color
-import android.util.Log
-import android.view.Gravity
 import android.view.LayoutInflater
 
 
