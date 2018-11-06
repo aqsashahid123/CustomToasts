@@ -23,6 +23,7 @@ class ToastCreater {
             try {
                 var toast: Toast
                 if (isLong) {
+                    
                     toast = Toast.makeText(context, message, Toast.LENGTH_LONG)
                 }else{
                     toast = Toast.makeText(context, message, Toast.LENGTH_SHORT)
