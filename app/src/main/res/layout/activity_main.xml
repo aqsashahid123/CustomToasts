@@ -12,5 +12,10 @@
        android:layout_height="wrap_content"
        android:text="SIMPLE TOAST"
        android:id="@+id/btnRandom"/>
+   <Button
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="COLOURED TOAST"
+       android:id="@+id/btnColouredToast"/>
 
 </LinearLayout>
