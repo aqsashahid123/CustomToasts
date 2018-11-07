@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             ToastCreater.simpleToast("Message",context,true)
         } else if (p0 === btnColouredToast) {
            ToastCreater.createToastWithCustomLayout(context,"Maine Kar dikhaya :)",
-                   Gravity.BOTTOM,"#000000",0,R.layout.custom_toast,R.id.root,R.id.customToastText)
+                   Gravity.BOTTOM,"#000000",R.layout.custom_toast,R.id.root,R.id.customToastText,true)
         }
     }
 

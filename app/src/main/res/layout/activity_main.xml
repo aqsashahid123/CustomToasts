@@ -5,17 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/colorAccent"
     tools:context=".MainActivity">
 
    <Button
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:text="SIMPLE TOAST"
+       android:text="SIMPLE TOAST :)"
        android:id="@+id/btnRandom"/>
    <Button
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:text="COLOURED TOAST"
+       android:text="COLOURED TOAST :)"
        android:id="@+id/btnColouredToast"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SHOW COLOURED TOAST :)"/>
 
 </LinearLayout>

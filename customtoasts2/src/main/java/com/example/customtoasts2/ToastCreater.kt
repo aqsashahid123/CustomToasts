@@ -45,6 +45,30 @@ class ToastCreater {
         }
 
 
+        private fun Toast.createColouredToasts(context: Context, message: String, gravity: Int,
+                                      backgroundColor: String,textColor:String,  isLong: Boolean) {
+            val infflater: LayoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+            val layout = infflater.inflate(R.layout.custom_toast_background, (context as Activity).findViewById(R.id.customToastRoot))
+          var tv:TextView
+                  tv= layout.findViewById<TextView>(R.id.textForToast)
+            tv.text = message
+            tv.setTextColor(textColor.toColor())
+            tv.setBackgroundColor(Color.parseColor(backgroundColor))
+            //layout.findViewById<TextView>(R.id.textForToast).setTextColor(textColor.toColor())
+            //layout.setBackgroundColor(Color.parseColor(backgroundColor))
+            setGravity(gravity, 0, 100)
+            if (isLong) {
+                duration = Toast.LENGTH_LONG
+            }else{
+                duration = Toast.LENGTH_SHORT
+            }
+            view = layout
+            show()
+
+        }
+        fun String.toColor(): Int = Color.parseColor(this)
+
+
     }
 
 }
