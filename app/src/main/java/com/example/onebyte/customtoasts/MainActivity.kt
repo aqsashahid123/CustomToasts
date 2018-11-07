@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         context = this
         btnRandom.setOnClickListener(this)
         btnColouredToast.setOnClickListener(this)
-
+        yummyToast.setOnClickListener(this)
     }
 
     override fun onClick(p0: View?) {
@@ -29,6 +29,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         } else if (p0 === btnColouredToast) {
            ToastCreater.createToastWithCustomLayout(context,"Maine Kar dikhaya :)",
                    Gravity.BOTTOM,"#000000",R.layout.custom_toast,R.id.root,R.id.customToastText,true)
+        }else if (p0===yummyToast){
+          //  ToastCreater.
         }
     }
 

@@ -45,7 +45,7 @@ class ToastCreater {
         }
 
 
-        private fun Toast.createColouredToasts(context: Context, message: String, gravity: Int,
+         fun Toast.createColouredToasts(context: Context, message: String, gravity: Int,
                                       backgroundColor: String,textColor:String,  isLong: Boolean) {
             val infflater: LayoutInflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
             val layout = infflater.inflate(R.layout.custom_toast_background, (context as Activity).findViewById(R.id.customToastRoot))
