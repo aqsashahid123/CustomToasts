@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
            ToastCreater.createToastWithCustomLayout(context,"Maine Kar dikhaya :)",
                    Gravity.BOTTOM,"#000000",R.layout.custom_toast,R.id.root,R.id.customToastText,true)
         }else if (p0===yummyToast){
-          //  ToastCreater.
+            ToastCreater
         }
     }
 
